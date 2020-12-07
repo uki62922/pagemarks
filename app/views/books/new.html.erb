@@ -1,0 +1,10 @@
+<div class="contents row">
+  <div class="container">
+    <h3>本を作る</h3>
+    <%= form_with(model: @book, local: true) do |form| %>
+      <%= form.text_field :title, placeholder: "タイトル" %>
+      <%= form.text_area :content, placeholder: "説明" %>
+      <%= form.submit "作成" %>
+    <% end %>
+  </div>
+</div>

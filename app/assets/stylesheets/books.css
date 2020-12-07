@@ -1,0 +1,24 @@
+.title{
+  background-image: url(book.jpg);
+  width:100vw;
+  height:350px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  
+}
+
+.page-marks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:30px 100px;
+}
+
+.page-mark{
+}
+
+.create-book{
+  text-align: end;
+  margin:30px 100px;
+}
