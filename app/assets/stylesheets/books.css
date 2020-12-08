@@ -8,17 +8,31 @@
   
 }
 
-.page-marks{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin:30px 100px;
-}
-
-.page-mark{
-}
-
 .create-book{
   text-align: end;
   margin:30px 100px;
+}
+
+.books{
+  margin:80px 50px 20px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.book{
+  padding:30px;
+  margin-bottom:100px;
+  width:250px;
+  height:200px;
+  position: relative;
+}
+
+.book-title{
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  color: #9bdbf2;
+  font-size:28px;
 }

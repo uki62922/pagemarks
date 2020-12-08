@@ -1,37 +1,19 @@
 <div class="title">
 </div>
 
-<トップページ>
 <div class="page-marks">
-  <div class="page-mark">
-    ここに本を表示
-  </div>
-  <div class="page-mark">
-  ここに本を表示
-  </div>
-  <div class="page-mark">
-  ここに本を表示
-  </div>
+
 </div>
 <div class="create-book">
   <%=link_to "本を作る",new_book_path%>
 </div>
 
-<div class="contents row">
+<div class="books">
   <% @books.each do |book| %>
-    <div class="content_post" style="background-image: url();">
-      <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-          <li>
-            <%= link_to '編集', edit_book_path(book.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '詳細', book_path(book.id), method: :get %>
-          </li>
-        </ul>
+      <div class="book">
+        <%= link_to image_tag("note.png"), book_path(book.id), class: :"book-image" %>
+        <p class="book-title"><%= book.title %></p>
+        <%= link_to '編集', edit_book_path(book.id), class: :"book-edit"%>
       </div>
-      <p><%= book.title %></p>
-    </div>
   <% end %>
 </div>
