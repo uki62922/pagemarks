@@ -11,7 +11,7 @@
 <div class="books">
   <% @books.each do |book| %>
       <div class="book">
-        <%= link_to image_tag("note.png"), book_path(book.id), class: :"book-image" %>
+        <%= link_to image_tag("note.png"), book_pages_path(book.id), class: :"book-image" %>
         <p class="book-title"><%= book.title %></p>
         <%= link_to '編集', edit_book_path(book.id), class: :"book-edit"%>
       </div>

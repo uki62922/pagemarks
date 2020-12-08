@@ -37,7 +37,7 @@
 
 ### Association
 
-- belongs_to :room
+- belongs_to :book
 - has_many :comments
 
 
