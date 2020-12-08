@@ -1,0 +1,11 @@
+<div class="page-show">
+    <div class="page-image">
+      <%= image_tag @page.image.variant(resize: '1000x800'), class: "page-image" %>
+    </div>
+    <div class="page-under">
+    <p class="page-title"><%= @page.title %></p>
+    <p class="page-number"><%= "#{@page.number}ページ" %></p>
+    </div>
+</div>
+<%= link_to '編集', edit_book_page_path, class: "book-edit"%>
+<%= link_to '削除', "#{@page.id}", method: :delete %>

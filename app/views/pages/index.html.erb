@@ -1,1 +1,20 @@
-aaa
+<div class="pages-index">
+  <div class="pages">
+  <% @pages.each do|page|%>
+    <div class="page">
+      <div class="page-top">
+        <%= link_to (image_tag page.image.variant(resize: '300x250')), "pages/#{page.id}", class: "page-image" %>
+      </div>
+      <div class="page-under">
+        <%= page.title %>
+        <%= "#{page.number}ページ" %>
+      </div>
+    </div>   
+  <% end %>
+  </div> 
+</div>
+<div clas="pages-index-link">
+
+  <%= link_to "ページを追加する", new_book_page_path %>
+  <%= link_to '本を削除する', book_path(@book.id), method: :delete %>
+</div>

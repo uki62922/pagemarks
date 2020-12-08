@@ -1,0 +1,27 @@
+.pages{
+  display: flex;
+}
+
+.page{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;  
+  background-position: center center;
+  margin:20px;
+}
+
+.page-image{
+  display: flex;
+  justify-content: center;
+  margin:20px;
+}
+
+.page-under{
+  display: flex;
+  justify-content: center;
+}
+
+.page-title{
+  width:200px;
+}
