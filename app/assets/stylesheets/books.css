@@ -1,0 +1,38 @@
+.title{
+  background-image: url(book.jpg);
+  width:100vw;
+  height:350px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  
+}
+
+.create-book{
+  text-align: end;
+  margin:30px 100px;
+}
+
+.books{
+  margin:80px 50px 20px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.book{
+  padding:30px;
+  margin-bottom:100px;
+  width:250px;
+  height:200px;
+  position: relative;
+}
+
+.book-title{
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  color: #9bdbf2;
+  font-size:28px;
+}
