@@ -1,11 +1,25 @@
 <div class="page-show">
+  <div class=page-link>
+    
+    <%= link_to '削除', "#{@page.id}", method: :delete, class: "page-delete"%>
+    <%= link_to '編集', edit_book_page_path, class: "page-edit"%>
+  </div>
+    <div class="page-top">
+      <p class="page-title"><%= @page.title %></p>
+      <p class="page-number"><%= "#{@page.number}ページ" %></p>
+    </div>
     <div class="page-image">
-      <%= image_tag @page.image.variant(resize: '1000x800'), class: "page-image" %>
+      <% if @page.previous.present? %>
+        <%= link_to image_tag("left.png"), book_page_path(@book,@page.previous), class: "btn_arrow_back"%>
+      <% end %>
+      <%= image_tag @page.image.variant(resize: '900x750'), class: "page-image" %>
+      <% if @page.next.present? %>
+       <%= link_to image_tag("right.png"),book_page_path(@book,@page.next), class: "btn_arrow" %>
+      <% end %>
     </div>
-    <div class="page-under">
-    <p class="page-title"><%= @page.title %></p>
-    <p class="page-number"><%= "#{@page.number}ページ" %></p>
-    </div>
+
 </div>
-<%= link_to '編集', edit_book_page_path, class: "book-edit"%>
-<%= link_to '削除', "#{@page.id}", method: :delete %>
+
+
+
+

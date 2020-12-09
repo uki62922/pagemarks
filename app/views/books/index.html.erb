@@ -4,16 +4,16 @@
 <div class="page-marks">
 
 </div>
-<div class="create-book">
-  <%=link_to "本を作る",new_book_path%>
-</div>
 
 <div class="books">
   <% @books.each do |book| %>
       <div class="book">
-        <%= link_to image_tag("note.png"), book_pages_path(book.id), class: :"book-image" %>
-        <p class="book-title"><%= book.title %></p>
-        <%= link_to '編集', edit_book_path(book.id), class: :"book-edit"%>
+          <div class="book-title">
+            <%= book.title %>
+          </div>
+        <div class="book-image">
+          <%= link_to image_tag("note.png"), book_pages_path(book.id) %>
+        </div>
       </div>
   <% end %>
 </div>

@@ -23,6 +23,10 @@ class PagesController < ApplicationController
   def show
     @page = Page.find(params[:id])
     @book = Book.find(params[:book_id])
+    # ad = rand(10)
+    # unless ad != 1
+    #   #広告
+    # end
   end
 
   def destroy
@@ -44,6 +48,7 @@ class PagesController < ApplicationController
       render :edit
     end
   end
+
 
   private
   def page_params
