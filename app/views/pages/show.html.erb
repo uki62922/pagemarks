@@ -1,6 +1,7 @@
 <div class="page-show">
+  <br>
   <div class=page-link>
-    
+    <%= link_to link_to "戻る", book_pages_path(@book.id) , class: "page-return"%>
     <%= link_to '削除', "#{@page.id}", method: :delete, class: "page-delete"%>
     <%= link_to '編集', edit_book_page_path, class: "page-edit"%>
   </div>

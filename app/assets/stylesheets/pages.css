@@ -40,6 +40,9 @@
   margin-right:30px;
   float:right;
 }
+.page-return{
+  margin-left:20px;
+}
 
 .btn_arrow,.btn_arrow_back{
   width:50px;
