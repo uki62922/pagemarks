@@ -1,0 +1,50 @@
+.pages{
+  display: flex;
+}
+
+.page{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;  
+  background-position: center center;
+  margin:30px;
+}
+
+.page-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+}
+
+.page-top{
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-title{
+  width:200px;
+  font-weight: bold;
+}
+
+.page-under{
+  margin:20px 0 100px;
+}
+
+.page-new{
+  margin-left:50px;
+}
+.page-edit,.page-delete{
+  margin-right:30px;
+  float:right;
+}
+.page-return{
+  margin-left:20px;
+}
+
+.btn_arrow,.btn_arrow_back{
+  width:50px;
+  margin:0 -5px;
+}

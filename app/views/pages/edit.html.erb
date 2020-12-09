@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <h3>編集する</h3>
+    <%= form_with model: [@book,@page], local: true do |form| %>
+      <%= form.text_field :title, placeholder: "本のタイトル" %>
+      <%= form.text_field :number, placeholder: "ページ" %>
+      <%= form.file_field :image, placeholder: "画像" %>
+      <%= form.submit "編集完了" %>
+    <% end %>
+  </div>
+</div>

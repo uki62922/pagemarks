@@ -45,7 +45,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :content)
+    params.require(:book).permit(:title, :content).merge(user_id:current_user.id)
   end
 
   def move_to_index

@@ -1,0 +1,20 @@
+<div class="pages-index">
+<div clas="pages-link">
+<br>
+  <%= link_to "ページを追加する", new_book_page_path, class: "page-new"%>
+  <%= link_to '編集', edit_book_path(@book.id), class: "page-edit"%>
+</div>
+  <div class="pages">
+    <% @pages.each do|page|%>
+      <div class="page">
+        <div class="page-top">
+          <%= link_to (image_tag page.image.variant(resize: '300x250')), "pages/#{page.id}", class: "page-image" %>
+        </div>
+        <div class="page-top">
+          <%= page.title %>
+          <%= "：#{page.number}ページ" %>
+        </div>
+      </div>   
+    <% end %>
+  </div> 
+</div>
